@@ -2,7 +2,7 @@
 
 
 
-[![Static Badge](https://img.shields.io/badge/bioRXiv-10.1101%2F2024.03.26.586597-red.svg?style=flat)](https://doi.org/10.1101/2024.03.26.586597)
+[![Static Badge](https://img.shields.io/badge/bioRXiv-10.1101%2F2024.03.26.586597-red.svg?style=flat)](https://doi.org/10.1101/2024.03.26.586597) The DOI will be updated on publication
 
 
 __Authors: Bo Shen, Duc Nguyen, Jailyn Wilson, Paul Glimcher, Kenway Louie__
