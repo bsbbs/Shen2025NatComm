@@ -1,9 +1,11 @@
-# Origins of noise in both improving and degrading decision making
+# The stage at which neural noise arises determines whether context improves or degrades decision-making
+
+
 
 [![Static Badge](https://img.shields.io/badge/bioRXiv-10.1101%2F2024.03.26.586597-red.svg?style=flat)](https://doi.org/10.1101/2024.03.26.586597)
 
 
-__Authors: Bo Shen, Jailyn Wilson, Duc Nguyen, Paul Glimcher, Kenway Louie__
+__Authors: Bo Shen, Duc Nguyen, Jailyn Wilson, Paul Glimcher, Kenway Louie__
 
 __New York University, Grossman School of Medicine__
 
@@ -25,9 +27,9 @@ This is a repository for a manuscript under review, titled "Origins of noise in 
 
 - [Empirical data](./myData): Human choice data created by the current project. Please check the [README file](./myData/README.txt) for further information about the data structure and variables.
 - [Data collection code](./DataCollectionCode): The Matlab code used for presenting choice information and collecting the participants' responses with Psychtoolbox 3.0.19.
-- [Simulation code](./ModelSimulationCode): Matlab code for the modeling part of the paper. To replicate the simulation, please follow the main files [Fig1](./ModelSimulationCode/Fig1.m), [Fig2](./ModelSimulationCode/Fig2.m), and [Fig4](./ModelSimulationCode/Fig4.m).
-- [Data analysis code](./BehavioralDataAnalysisCodeRevision1.Rmd): `R` code for analyzing the empirical data. To replicate the data analysis, please change the directory of the data according to your local directory environment and follow the sections in the code.
-- [Model fitting code](./Modelfit): Matlab code for model fitting can be found in [Modelfit.m](./Modelfit/ModelFit.m). Posterior check for fitting performance can be found in [Modelfit_PostCheck.m](./Modelfit/Modelfit_PostCheck.m).
+- [Simulation code](./ModelSimulationCode): Matlab code for the modeling part of the paper. To replicate the simulation, please follow the main files [Fig1](./ModelSimulationCode/Fig1.m), [Fig2](./ModelSimulationCode/Fig2.m), [Fig4](./ModelSimulationCode/Fig4.m), [Supplementary Fig1ab](./ModelSimulationCode/SuppFig1ab.m), and [Supplementary Fig1d](./ModelSimulationCode/SuppFig1d.m).
+- [Data analysis code](./BehavioralDataAnalysisCode.Rmd): `R` code for analyzing the empirical data. To replicate the data analysis, please change the directory of the data according to your local directory environment and follow the sections in the code.
+- [Model fitting code](./ModelfitCode): Matlab code for model fitting can be found in [Modelfit.m](./ModelfitCode/ModelFit.m). Posterior check for fitting performance can be found in [Modelfit_PostCheck.m](./ModelfitCode/Modelfit_PostCheck.m).
 
 
 # System Requirements
