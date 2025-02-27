@@ -2,7 +2,7 @@
 
 
 
-[![Static Badge](https://img.shields.io/badge/bioRXiv-10.1101%2F2024.03.26.586597-red.svg?style=flat)](https://doi.org/10.1101/2024.03.26.586597) The DOI will be updated on publication
+[![Static Badge](https://img.shields.io/badge/bioRXiv-10.1101%2F2024.03.26.586597-red.svg?style=flat)](https://doi.org/10.1101/2024.03.26.586597) The DOI will be updated upon publication
 
 
 __Authors: Bo Shen, Duc Nguyen, Jailyn Wilson, Paul Glimcher, Kenway Louie__
@@ -21,7 +21,7 @@ __New York University, Grossman School of Medicine__
 
 # Overview
 
-This is a repository for a manuscript under review, titled "The stage at which neural noise arises determines whether context improves or degrades decision-making". It is *in press* at Nature Communications. The DOI information will be mapped after the paper is online.
+This is a repository for a manuscript under review, titled "The stage at which neural noise arises determines whether context improves or degrades decision-making". It is accepted at *Nature Communications*. The DOI information will be updated upon publication.
 
 # Repo Contents
 
