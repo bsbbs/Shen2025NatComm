@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATH --partition=fn_medium
+#SBATCH --job-name=Sim
+#SBATCH --mem=800G
+#SBATCH --time=5-00:00:00
+#SBATCH --tasks=1
+#SBATCH --cpus-per-task=40
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=1
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=bs3667@nyu.edu
+srun /gpfs/data/glimcherlab/BoShen/Noise/Prediction/batch

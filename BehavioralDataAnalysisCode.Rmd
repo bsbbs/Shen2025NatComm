@@ -760,7 +760,7 @@ dev.off()
 ## Visualize model simulations
 ```{r}
 colors_cool <- c("blue", "cyan", "green", "gold", "orange","red")
-smdir <- '/Users/bs3667/NYU Langone Health Dropbox/Shen Bo/Bo Shen Working files/NoiseProject/Prediction/Fig4'
+smdir <- './OutputfromMatlab/Prediction/Fig4'
 V1mean <- 88
 V2mean <- 83
 for (modeli in 1:4)
@@ -785,10 +785,6 @@ for (modeli in 1:4)
     cmap1 <- cmap}
     if (ti == 2){cmap <- colors_cool #mycols[1:length(early)]
     cmap2 <- cmap}
-    # if (ti == 1){cmap <- colorRampPalette(c(rgb(1, 191/255, 0), "red"))(length(early))
-    # cmap1 <- cmap}
-    # if (ti == 2){cmap <- colorRampPalette(c("blue", rgb(0, 1, 128/255)))(length(early))
-    # cmap2 <- cmap}
     choice <- prdct[prdct$Late == late[ti] & prdct$Early == early[1],]$choice
     if ((ti == 1) || modeli == 4)
     {plot(v3vec, choice, type = "n", xlim = c(0, V2mean), ylim = yrng,  xlab=' ', ylab=' ', 
@@ -812,8 +808,8 @@ for (modeli in 1:4)
 ```
 ## Mean-scaled noise simulation
 ```{r}
-prdct <- read.table(file = '/Users/bs3667/NYU Langone Health Dropbox/Shen Bo/Bo Shen Working files/NoiseProject/Prediction/MeanScaledNoise/Ratio_Model4_MeanScaled_V1_88_sd1_4.5_50V3max83_.txt', header = TRUE)
-out_dir <- '/Users/bs3667/NYU Langone Health Dropbox/Shen Bo/Bo Shen Working files/NoiseProject/Prediction/MeanScaledNoise'
+prdct <- read.table(file = './OutputfromMatlab/Prediction/MeanScaledNoise/Ratio_Model4_MeanScaled_V1_88_sd1_4.5_50V3max83_.txt', header = TRUE)
+out_dir <- './OutputfromMatlab/Prediction/MeanScaledNoise'
 V1mean <- 88
 V2mean <- 83
 v3vec <- unique(prdct$V3)
@@ -848,18 +844,14 @@ dev.off()
 for (ti in 1)
 {
   # Plotting
-  if (ti == 1){cmap <- colors_warm #mycols[1:length(early) + length(mycols)-length(early)]
+  if (ti == 1){cmap <- colors_warm
   cmap1 <- cmap
   yrng <- c(73,77)
   yticks <- 73:77}
-  if (ti == 2){cmap <- colors_warm #mycols[1:length(early)]
+  if (ti == 2){cmap <- colors_warm
   cmap2 <- cmap
   yrng <- c(68.7,71)
   yticks <- 69:71}
-  # if (ti == 1){cmap <- colorRampPalette(c(rgb(1, 191/255, 0), "red"))(length(early))
-  # cmap1 <- cmap}
-  # if (ti == 2){cmap <- colorRampPalette(c("blue", rgb(0, 1, 128/255)))(length(early))
-  # cmap2 <- cmap}
   choice <- prdct[prdct$Late == late[ti] & prdct$Early == early[1],]$choice
   if (ti == 1)
   {plot(v3vec, choice, type = "n", xlim = c(0, V1mean), ylim = yrng,  xlab=' ', ylab=' ', 
@@ -886,8 +878,8 @@ dev.off()
 ```
 ## Modle prediction on empirical V3 mean-variance
 ```{r}
-prdct <- read.table(file = '/Users/bs3667/NYU Langone Health Dropbox/Shen Bo/Bo Shen Working files/NoiseProject/Prediction/Revision2/Model4_Predict_V11.284661e+02_V22.445383e+02_sd148.4_etavec6.txt', header = TRUE)
-plot_dir <- '/Users/bs3667/NYU Langone Health Dropbox/Shen Bo/Bo Shen Working files/NoiseProject/Prediction/Revision2/plot'
+prdct <- read.table(file = './OutputfromMatlab/Prediction/Revision2/Model4_Predict_V11.284661e+02_V22.445383e+02_sd148.4_etavec6.txt', header = TRUE)
+plot_dir <- './OutputfromMatlab/Prediction/Revision2/plot'
 mtmodel <- prdct[prdct$eta == 0,]
 V1scldmean <- mean(mtmodel$V1scld)
 V2scldmean <- mean(mtmodel$V2scld)
@@ -953,16 +945,6 @@ for (etai in 1:6)
   HighestV3 <- 1
   v3vec <- seq(LowestV3, HighestV3, .015)
   
-  #if (etai == 1){mycol <- rgb(1, 0, 0)
-  #mycol1 <- mycol
-  #mycoltrnsp <- rgb(1, 0, 0, .2)}
-  #if (v == 'Precise' & tp == 'High'){mycol <- rgb(0, 0, 1)
-  #mycoltrnsp <- rgb(0,0,1,.2)}
-  #if (etai == 2){mycol <- rgb(1, 191/255, 0)
-  #mycol2 <- mycol
-  #mycoltrnsp <- rgb(1, 191/255, 0, .2)}
-  #if (v == 'Precise' & tp == 'Low'){mycol <- rgb(0, 1, 128/255)
-  #mycoltrnsp <- rgb(0, 1, 128/255, .2)}
   mycol <- colors_warm[etai]
   onesect <- AccID3sim[AccID3sim$V3scld >= LowestV3 & AccID3sim$V3scld <= HighestV3,]
   acc <- c()
@@ -995,17 +977,15 @@ dev.off()
 
 ## Model Comparison results - The current dataset - Adding time pressure impact on early noise
 ```{r}
-Analysis <- '/Users/bs3667/NYU Langone Health Dropbox/Shen Bo/Bo Shen Working files/NoiseProject/ModelfitExtended'
+Analysis <- './OutputfromMatlab/Modelfit'
 fitout_dir <- file.path(Analysis,'plot')
 if (!dir.exists(fitout_dir)){dir.create(fitout_dir)}
 fastbads <- read.table(file.path(Analysis,'BestRslts.txt'), header = TRUE, sep = '\t')
-demograph <- read.csv('/Users/bs3667/Noise/myData/Demographics.csv', header = TRUE)
 fastbads$subID <- as.character(fastbads$subID)
 sublist <- unique(fastbads$subID)
 fastbads$name <- factor(fastbads$name, levels = c('McFadden','LinearDistrb','DNM','dnDNM','dnDNMExtened'))
 names <- levels(fastbads$name)
 fastbads$modeli <- as.factor(fastbads$modeli)
-fastbads <- merge(fastbads, demograph, by = 'subID')
 str(fastbads)
 # convert AIC and BIC
 ICpool <- c()

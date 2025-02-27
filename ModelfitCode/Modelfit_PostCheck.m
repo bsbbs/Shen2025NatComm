@@ -1,9 +1,8 @@
-%% 
 %% define directories
 DefineIO;
 %% Loading the data transformed in the code: /Users/bs3667/Noise/modelfit/ModelFit-DataTrnsfrm.m
 load(fullfile(Gitdir, 'myData', 'TrnsfrmData.mat'), 'mt');
-fitdir = fullfile(rootdir, 'ModelfitExtended');
+fitdir = fullfile(rootdir, 'Modelfit');
 fit = tdfread(fullfile(fitdir, 'BestRslts.txt'));
 plot_dir = fullfile(fitdir, 'plot');
 %% Transform data
