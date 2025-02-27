@@ -1260,7 +1260,7 @@ dev.off()
 ## Post predictive check on Model fitting
 ```{r}
 ## Post predictive check
-for (mdli in 1:5)
+for (mdli in 4)
 {
   mtmodel <- read.table(file.path(Analysis,sprintf('Model%i_Predict.txt', mdli)), header = TRUE, sep = '\t')
   mtmodel$Group <- as.factor(mtmodel$Group)
