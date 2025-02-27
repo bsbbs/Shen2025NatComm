@@ -21,7 +21,7 @@ __New York University, Grossman School of Medicine__
 
 # Overview
 
-This is a repository for a manuscript under review, titled "Origins of noise in both improving and degrading decision making". This is an unpublished work. The contents may change during the revision.
+This is a repository for a manuscript under review, titled "The stage at which neural noise arises determines whether context improves or degrades decision-making". It is *in press* at Nature Communications. The DOI information will be mapped after the paper is online.
 
 # Repo Contents
 
